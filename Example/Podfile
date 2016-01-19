@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'XLEasyCache_Example', :exclusive => true do
+  pod "XLEasyCache", :path => "../"
+end
+
+target 'XLEasyCache_Tests', :exclusive => true do
+  pod "XLEasyCache", :path => "../"
+
+  
+end
