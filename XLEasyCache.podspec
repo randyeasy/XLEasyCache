@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "XLEasyCache"
   s.version          = "0.1.0"
-  s.summary          = "A short description of XLEasyCache."
+  s.summary          = "封装UserCache和CommonCache 添加基本类型键值保存."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,24 +17,21 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
+            添加TXUserCache和TXCommonCache类，并添加基本类型 TXCache+TXBaseType
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/XLEasyCache"
+  s.homepage         = "https://github.com/randyeasy/XLEasyCache"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "闫晓亮" => "yanxiaoliang@baijiahulian.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/XLEasyCache.git", :tag => s.version.to_s }
+  s.author           = { "randy" => "ouyaliang@163.com" }
+  s.source           = { :git => "https://github.com/randyeasy/XLEasyCache.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '6.1'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'XLEasyCache' => ['Pod/Assets/*.png']
-  }
+  s.source_files = 'Pod/Classes/*'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.public_header_files = ['Pod/Classes/XLECache.h', 'Pod/Classes/XLECache+XLEBaseType.h', 'Pod/Classes/XLECommonCache.h', 'Pod/Classes/XLEUserCache.h', 'Pod/Classes/XLEasyCache.h']
+  s.dependency 'TMCache', '~> 1.2'
 end

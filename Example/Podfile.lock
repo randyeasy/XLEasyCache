@@ -1,0 +1,17 @@
+PODS:
+  - TMCache (1.2.4)
+  - XLEasyCache (0.1.0):
+    - TMCache (~> 1.2)
+
+DEPENDENCIES:
+  - XLEasyCache (from `../`)
+
+EXTERNAL SOURCES:
+  XLEasyCache:
+    :path: ../
+
+SPEC CHECKSUMS:
+  TMCache: a93984b045a5ee84bd8941bd5e0b54296059cc52
+  XLEasyCache: 1675ff27ae65c89ab5a3436d1e0faa896dcf9c81
+
+COCOAPODS: 0.39.0

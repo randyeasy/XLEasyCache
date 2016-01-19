@@ -7,6 +7,7 @@
 //
 
 #import "XLEViewController.h"
+#import <XLEasyCache/XLEasyCache.h>
 
 @interface XLEViewController ()
 

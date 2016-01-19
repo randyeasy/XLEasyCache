@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		250B51861C4E5F7600EFD917 /* XLECacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 250B51851C4E5F7600EFD917 /* XLECacheTests.m */; };
+		4290DB153B9E56D15897F2D9 /* libPods-XLEasyCache_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E21B34F1F775830FA2FA09CF /* libPods-XLEasyCache_Example.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -20,9 +22,8 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		847CFBABD1671EAEB93A0F2B /* Pods_XLEasyCache_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CC6CEDED701357613AFA3B /* Pods_XLEasyCache_Tests.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		9EA3E33502397549C80B4F0B /* Pods_XLEasyCache_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E35EF2C7CEF2D7236210927 /* Pods_XLEasyCache_Example.framework */; };
+		B5D9F5DE5B606DDCDEE8E812 /* libPods-XLEasyCache_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E841BF29C8B456E1BFA685 /* libPods-XLEasyCache_Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		15771C11EF37DAC9504B69EC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		250B51851C4E5F7600EFD917 /* XLECacheTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLECacheTests.m; sourceTree = "<group>"; };
 		320C1DEF53FE53D1089291B9 /* Pods-XLEasyCache_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLEasyCache_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XLEasyCache_Example/Pods-XLEasyCache_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		41DCFEBF71E62E373BC8687F /* XLEasyCache.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = XLEasyCache.podspec; path = ../XLEasyCache.podspec; sourceTree = "<group>"; };
 		45A199FBA42613C3695B1524 /* Pods-XLEasyCache_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLEasyCache_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XLEasyCache_Tests/Pods-XLEasyCache_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -59,11 +61,11 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6E35EF2C7CEF2D7236210927 /* Pods_XLEasyCache_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XLEasyCache_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		91CC6CEDED701357613AFA3B /* Pods_XLEasyCache_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XLEasyCache_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9E841BF29C8B456E1BFA685 /* libPods-XLEasyCache_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XLEasyCache_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D463E97B62BA9B89B09F2E08 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E1E82CA5859B22F3294116EA /* Pods-XLEasyCache_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLEasyCache_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XLEasyCache_Tests/Pods-XLEasyCache_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E21B34F1F775830FA2FA09CF /* libPods-XLEasyCache_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XLEasyCache_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A6D78ED8B38E3BDB389613 /* Pods-XLEasyCache_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLEasyCache_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-XLEasyCache_Example/Pods-XLEasyCache_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +77,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				9EA3E33502397549C80B4F0B /* Pods_XLEasyCache_Example.framework in Frameworks */,
+				4290DB153B9E56D15897F2D9 /* libPods-XLEasyCache_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +88,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				847CFBABD1671EAEB93A0F2B /* Pods_XLEasyCache_Tests.framework in Frameworks */,
+				B5D9F5DE5B606DDCDEE8E812 /* libPods-XLEasyCache_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +123,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				6E35EF2C7CEF2D7236210927 /* Pods_XLEasyCache_Example.framework */,
-				91CC6CEDED701357613AFA3B /* Pods_XLEasyCache_Tests.framework */,
+				E21B34F1F775830FA2FA09CF /* libPods-XLEasyCache_Example.a */,
+				A9E841BF29C8B456E1BFA685 /* libPods-XLEasyCache_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				6003F5BB195388D20070C39A /* Tests.m */,
+				250B51851C4E5F7600EFD917 /* XLECacheTests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
 			path = Tests;
@@ -400,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				250B51861C4E5F7600EFD917 /* XLECacheTests.m in Sources */,
 				6003F5BC195388D20070C39A /* Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
