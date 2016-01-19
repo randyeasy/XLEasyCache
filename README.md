@@ -22,7 +22,7 @@ pod "XLEasyCache"
 
 ## Author
 
-闫晓亮, yanxiaoliang@baijiahulian.com
+randy, ouyaliang@163.com
 
 ## License
 
