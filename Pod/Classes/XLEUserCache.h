@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)registerCacheWithUserName:(nullable NSString *)userName;
 
-//长期保存、不备份 根据name生成目录
+//长期保存、不备份 根据name生成目录 磁盘空间不足时会被移除
 + (XLEUserCache *)sharedCache;
 //永久保存、itunes备份
 + (XLEUserCache *)sharedBackUpCache;
