@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface XLECache (XLEInternal)
 @property (strong, nullable) TMCache *tmCache;
 
-+ (NSString *)docRootDir;
++ (NSString *)libraryRootDir;
 
 + (NSString *)tempRootDir;
 

@@ -51,7 +51,7 @@
     static id sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[self alloc] initWithName:nil rootPath:[XLECache docRootDir]];
+        sharedInstance = [[self alloc] initWithName:nil rootPath:[XLECache libraryRootDir]];
     });
     return sharedInstance;
 }

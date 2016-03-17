@@ -8,15 +8,15 @@
 
 #import "XLECache+XLEInternal.h"
 
-NSString *const XLECache_Root_Dir_Name = @"XLECacheRoot";
+NSString *const XLECache_Root_Dir_Name = @"com.easy.cache";
 
 
 @implementation XLECache (XLEInternal)
 @dynamic tmCache;
 #pragma mark - internal
 
-+ (NSString *)pathForDocument {
-    NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
++ (NSString *)pathForLibrary {
+    NSString *path = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES).firstObject;
     return path;
 }
 
@@ -30,9 +30,9 @@ NSString *const XLECache_Root_Dir_Name = @"XLECacheRoot";
     return path;
 }
 
-+ (NSString *)docRootDir
++ (NSString *)libraryRootDir
 {
-    NSString *docDir = [[self pathForDocument] stringByAppendingPathComponent:XLECache_Root_Dir_Name];
+    NSString *docDir = [[self pathForLibrary] stringByAppendingPathComponent:XLECache_Root_Dir_Name];
     return docDir;
 }
 
