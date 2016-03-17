@@ -43,6 +43,10 @@
     [[XLECommonCache sharedCache] removeObjectForKey:@"testKey"];
     XCTAssert([[XLECommonCache sharedCache] objectForKey:@"testKey"]==nil,@"实际结果和预期结果不符");
     
+    [[XLECommonCache sharedForeverCache] setObject:testValue forKey:@"testKey"];
+    XCTAssert([[XLECommonCache sharedForeverCache] objectForKey:@"testKey"],@"实际结果和预期结果不符");
+    XCTAssert([[XLECommonCache sharedForeverCache] stringForKey:@"testKey"],@"实际结果和预期结果不符");
+    
     [[XLECommonCache sharedBackupCache] setObject:testValue forKey:@"testKey"];
     XCTAssert([[XLECommonCache sharedBackupCache] objectForKey:@"testKey"],@"实际结果和预期结果不符");
     XCTAssert([[XLECommonCache sharedBackupCache] stringForKey:@"testKey"],@"实际结果和预期结果不符");
@@ -57,6 +61,10 @@
     [[XLEUserCache sharedCache] setObject:testValue forKey:@"testKey"];
     XCTAssert([[XLEUserCache sharedCache] objectForKey:@"testKey"],@"实际结果和预期结果不符");
     XCTAssert([[XLEUserCache sharedCache] stringForKey:@"testKey"],@"实际结果和预期结果不符");
+    
+    [[XLEUserCache sharedForeverCache] setObject:testValue forKey:@"testKey"];
+    XCTAssert([[XLEUserCache sharedForeverCache] objectForKey:@"testKey"],@"实际结果和预期结果不符");
+    XCTAssert([[XLEUserCache sharedForeverCache] stringForKey:@"testKey"],@"实际结果和预期结果不符");
     
     [[XLEUserCache sharedBackUpCache] setObject:testValue forKey:@"testKey"];
     XCTAssert([[XLEUserCache sharedBackUpCache] objectForKey:@"testKey"],@"实际结果和预期结果不符");
@@ -203,6 +211,7 @@
     
     [[XLEUserCache sharedCache] setObject:testValue forKey:@"testKey"];
     [[XLEUserCache sharedBackUpCache] setObject:testValue forKey:@"testKey"];
+    [[XLEUserCache sharedForeverCache] setObject:testValue forKey:@"testKey"];
     [[XLEUserCache sharedTempCache] setObject:testValue forKey:@"testKey"];
     XLEUserCache *userCache1 = [XLEUserCache userCacheWithCacheName:@"removeCache1" rootPath:paths[0]];
     XLEUserCache *userCache2 = [XLEUserCache userCacheWithCacheName:@"removeCache2" rootPath:paths[0]];
@@ -216,6 +225,7 @@
     
     XCTAssert([[XLEUserCache sharedCache] objectForKey:@"testKey"]==nil,@"实际结果和预期结果不符");
     XCTAssert([[XLEUserCache sharedBackUpCache] objectForKey:@"testKey"]==nil,@"实际结果和预期结果不符");
+    XCTAssert([[XLEUserCache sharedForeverCache] objectForKey:@"testKey"]==nil,@"实际结果和预期结果不符");
     XCTAssert([[XLEUserCache sharedTempCache] objectForKey:@"testKey"]==nil,@"实际结果和预期结果不符");
     XCTAssert([userCache1 objectForKey:@"testKey"]==nil,@"实际结果和预期结果不符");
     XCTAssert([userCache2 objectForKey:@"testKey"]==nil,@"实际结果和预期结果不符");

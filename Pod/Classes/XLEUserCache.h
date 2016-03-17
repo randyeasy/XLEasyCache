@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 //长期保存、不备份 根据name生成目录 磁盘空间不足时会被移除
 + (XLEUserCache *)sharedCache;
+//永久保存、不备份
++ (XLEUserCache *)sharedForeverCache;
 //永久保存、itunes备份
 + (XLEUserCache *)sharedBackUpCache;
 //临时保存，内存不够，或者重启应用可能被删除

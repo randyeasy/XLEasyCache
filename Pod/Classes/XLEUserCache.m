@@ -63,6 +63,7 @@
     [XLEUserCache sharedCache];
     [XLEUserCache sharedTempCache];
     [XLEUserCache sharedBackUpCache];
+    [XLEUserCache sharedForeverCache];
 
     for (XLEUserCache *oneCache in [self userCacheList]) {
         [oneCache updateWithUserName:userName];
@@ -76,6 +77,17 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[self alloc] initWithUserName:nil cacheName:nil rootPath:[XLECache cacheRootDir]];
+    });
+    return sharedInstance;
+}
+
+//永久保存、不备份
++ (XLEUserCache *)sharedForeverCache;
+{
+    static id sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[self alloc] initWithUserName:nil cacheName:nil rootPath:[XLECache foreverRootDir]];
     });
     return sharedInstance;
 }

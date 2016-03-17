@@ -9,10 +9,15 @@
 #import "XLECache+XLEInternal.h"
 
 NSString *const XLECache_Root_Dir_Name = @"com.easy.cache";
-
+NSString *const XLECache_Forover_Dir_Name = @"com.easy.cache.forever";
 
 @implementation XLECache (XLEInternal)
 @dynamic tmCache;
+
++ (void)load{
+    
+}
+
 #pragma mark - internal
 
 + (NSString *)pathForLibrary {
@@ -44,6 +49,11 @@ NSString *const XLECache_Root_Dir_Name = @"com.easy.cache";
 + (NSString *)cacheRootDir
 {
     return [[self pathForCaches] stringByAppendingPathComponent:XLECache_Root_Dir_Name];
+}
+
++ (NSString *)foreverRootDir
+{
+    return [[self pathForLibrary] stringByAppendingPathComponent:XLECache_Forover_Dir_Name];
 }
 
 @end

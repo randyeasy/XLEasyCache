@@ -56,6 +56,17 @@
     return sharedInstance;
 }
 
+//永久保存、不备份
++ (XLECommonCache *)sharedForeverCache;
+{
+    static id sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[self alloc] initWithName:nil rootPath:[XLECache foreverRootDir]];
+    });
+    return sharedInstance;
+}
+
 //生成一个当前的Cache对象
 + (XLECommonCache *)cacheWithCacheName:(NSString *)cacheName rootPath:(NSString *)rootPath;
 {

@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 //长期保存、不备份，磁盘空间不足时会被移除
 + (XLECommonCache *)sharedCache;
+//永久保存、不备份
++ (XLECommonCache *)sharedForeverCache;
 //永久保存、备份
 + (XLECommonCache *)sharedBackupCache;
 //临时保存，内存不够，或者重启应用可能被删除

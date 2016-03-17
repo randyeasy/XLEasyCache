@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString *)cacheRootDir;
 
++ (NSString *)foreverRootDir;
+
 @end
 
 NS_ASSUME_NONNULL_END
