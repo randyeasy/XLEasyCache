@@ -14,8 +14,11 @@ NSString *const XLECache_Forover_Dir_Name = @"com.easy.cache.forever";
 @implementation XLECache (XLEInternal)
 @dynamic tmCache;
 
-+ (void)load{
-    
++ (void)initialize{
+    NSString *path = [self foreverRootDir];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    NSError *error;
+    [url setResourceValue:[NSNumber numberWithBool:YES] forKey:NSURLIsExcludedFromBackupKey error:&error];
 }
 
 #pragma mark - internal
@@ -53,7 +56,8 @@ NSString *const XLECache_Forover_Dir_Name = @"com.easy.cache.forever";
 
 + (NSString *)foreverRootDir
 {
-    return [[self pathForLibrary] stringByAppendingPathComponent:XLECache_Forover_Dir_Name];
+    NSString *path = [[self pathForLibrary] stringByAppendingPathComponent:XLECache_Forover_Dir_Name];
+    return path;
 }
 
 @end
