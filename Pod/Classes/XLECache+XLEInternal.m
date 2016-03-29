@@ -16,9 +16,14 @@ NSString *const XLECache_Forover_Dir_Name = @"com.easy.cache.forever";
 
 + (void)initialize{
     NSString *path = [self foreverRootDir];
+    [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
     NSURL *url = [NSURL fileURLWithPath:path];
     NSError *error;
     [url setResourceValue:[NSNumber numberWithBool:YES] forKey:NSURLIsExcludedFromBackupKey error:&error];
+    
+    [[NSFileManager defaultManager] createDirectoryAtPath:[self tempRootDir] withIntermediateDirectories:YES attributes:nil error:nil];
+    [[NSFileManager defaultManager] createDirectoryAtPath:[self cacheRootDir] withIntermediateDirectories:YES attributes:nil error:nil];
+    [[NSFileManager defaultManager] createDirectoryAtPath:[self libraryRootDir] withIntermediateDirectories:YES attributes:nil error:nil];
 }
 
 #pragma mark - internal
