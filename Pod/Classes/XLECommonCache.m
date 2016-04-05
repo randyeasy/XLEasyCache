@@ -83,8 +83,6 @@
 
 + (void)removeAllObjects;
 {
-    [[XLECommonCache sharedCache] removeAllObjects];
-    [[XLECommonCache sharedTempCache] removeAllObjects];
     for (XLECommonCache *oneCache in [XLECommonCache cacheList]) {
         [oneCache removeAllObjects];
     }

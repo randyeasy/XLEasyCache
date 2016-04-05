@@ -10,6 +10,8 @@
 #import "XLECache+XLEInternal.h"
 #import "XLECache.h"
 
+static NSString *XLE_CACHE_REGISTER_NAME = nil;
+
 @interface XLEUserCache ()
 @end
 
@@ -17,15 +19,8 @@
 
 - (instancetype)initWithName:(NSString *)name rootPath:(NSString *)rootPath
 {
-    return [self initWithUserName:[XLEUserCache sharedCache].userName cacheName:name rootPath:rootPath];
-}
-
-- (instancetype)initWithUserName:(NSString *)userName
-                       cacheName:(NSString *)cacheName
-                        rootPath:(NSString *)rootPath
-{
-    if (self = [super initWithName:cacheName rootPath:rootPath]) {
-        _userName = userName;
+    if (self = [super initWithName:name rootPath:rootPath]) {
+        _userName = XLE_CACHE_REGISTER_NAME;
         if (self.userName.length>0) {
             self.tmCache = [[TMCache alloc] initWithName:self.name rootPath:[self finalRootPath]];
         }
@@ -59,12 +54,8 @@
  */
 + (void)registerCacheWithUserName:(nullable NSString *)userName
 {
-    //初始化
-    [XLEUserCache sharedCache];
-    [XLEUserCache sharedTempCache];
-    [XLEUserCache sharedBackUpCache];
-    [XLEUserCache sharedForeverCache];
-
+    XLE_CACHE_REGISTER_NAME = userName;
+    
     for (XLEUserCache *oneCache in [self userCacheList]) {
         [oneCache updateWithUserName:userName];
     }
@@ -76,7 +67,7 @@
     static id sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[self alloc] initWithUserName:nil cacheName:nil rootPath:[XLECache cacheRootDir]];
+        sharedInstance = [[self alloc] initWithName:nil rootPath:[XLECache cacheRootDir]];
     });
     return sharedInstance;
 }
@@ -87,7 +78,7 @@
     static id sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[self alloc] initWithUserName:nil cacheName:nil rootPath:[XLECache foreverRootDir]];
+        sharedInstance = [[self alloc] initWithName:nil rootPath:[XLECache foreverRootDir]];
     });
     return sharedInstance;
 }
@@ -98,7 +89,7 @@
     static id sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[self alloc] initWithUserName:nil cacheName:nil rootPath:[XLECache libraryRootDir]];
+        sharedInstance = [[self alloc] initWithName:nil rootPath:[XLECache libraryRootDir]];
     });
     return sharedInstance;
 }
@@ -109,7 +100,7 @@
     static id sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[self alloc] initWithUserName:nil cacheName:nil rootPath:[XLECache tempRootDir]];
+        sharedInstance = [[self alloc] initWithName:nil rootPath:[XLECache tempRootDir]];
     });
     return sharedInstance;
 }
@@ -124,7 +115,7 @@
     if (user) {
         return user;
     }
-    user = [[XLEUserCache alloc] initWithUserName:[XLEUserCache sharedCache].userName cacheName:cacheName rootPath:rootPath];
+    user = [[XLEUserCache alloc] initWithName:cacheName rootPath:rootPath];
     return user;
 }
 

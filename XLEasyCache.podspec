@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "XLEasyCache"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "封装UserCache和CommonCache 添加基本类型键值保存."
 
 # This description is used to generate tags and improve search results.

@@ -57,7 +57,10 @@
     
     [XLEUserCache registerCacheWithUserName:@"www_122323_1"];
     XCTAssert([[XLEUserCache sharedCache].userName isEqualToString:@"www_122323_1"]);
-    
+    XCTAssert([[XLEUserCache sharedForeverCache].userName isEqualToString:@"www_122323_1"]);
+    XCTAssert([[XLEUserCache sharedBackUpCache].userName isEqualToString:@"www_122323_1"]);
+    XCTAssert([[XLEUserCache sharedTempCache].userName isEqualToString:@"www_122323_1"]);
+
     [[XLEUserCache sharedCache] setObject:testValue forKey:@"testKey"];
     XCTAssert([[XLEUserCache sharedCache] objectForKey:@"testKey"],@"实际结果和预期结果不符");
     XCTAssert([[XLEUserCache sharedCache] stringForKey:@"testKey"],@"实际结果和预期结果不符");
